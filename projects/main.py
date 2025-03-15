@@ -10,4 +10,7 @@
 # calculator
 # blackjack
 # guess the number
+# LECTURE ON DEBUGGING
+# higher lower
 # coffee machine
+# OOP
