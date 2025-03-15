@@ -1,0 +1,185 @@
+PYTHON BOOTCAMP - ANGELA
+
+STRINGS:
+
+print("Hello world")
+
+\n to add another line
+
++ to add strings 
+
+PYTHON INPUT FUNCTION:
+
+name = input("What is your name?") # takes input from the end user
+print("Hello " + name)
+
+PYTHON VARIABLES:
+
+name = "Jack"
+length = len(name)
+print(length)
+
+PRIMITIVE DATA TYPES:
+
+- Strings - Strings can be subscripted i.e. "Hello"[0] => "H"
+- Integers - Use _ in place of commas (_ are ignored in python)
+- Float
+- Booleans
+
+ERRORS:
+
+NameError: trying to use a variable, function or module that has not been defined
+TypeError: type of the input to a function does not match the expected input type
+ValueError: input of right type but inappropriate value
+IndexError: list index out of range
+KeyError: dictionary key does not exists
+
+Use type(var) to check data type of the var variable
+
+round() => rounds up or down based on the input
+
+f-string: to insert a variable into a string
+
+print(f"Your score is = {score}")
+
+CONTROL FLOW WITH IF/ELSE:
+
+if num % 2 == 0:
+  print("Even")
+else:
+  print("Odd")
+
+if elif else (only one of the conditions is executed)
+if if if if (every true condition is executed) 
+
+LOGICAL OPERATORS:
+
+and or not
+
+\ escapes the symbols as text:
+print("You\'re awesome!")
+
+
+RANDOMISATION AND PYTHON LISTS:
+
+To bring unpredictability: use random module
+
+import random
+print(random.randint(1, 6)) # random integer between the specified range
+
+print(random.random()) # random float between 0 and 1
+
+print(random.uniform(1,10))
+
+print(random.choice(sequence)) # random item from a list
+
+Lists: groups related items and keeps track of the order (indexes)
+
+eg: fruits = ['apple', 'banana', 'cherry']
+
+Indexes start from 0 : Indexes are offset from 0 i.e. fruits[1] = +1 from 0
+
+Use append to add an item to the list
+Use extend to add multiple items to the list
+
+LOOPS:
+
+FOR:
+```
+for fruit in fruits:
+  print(fruit)
+```
+
+WHILE: run the loop until a condition is true
+```
+num = 5
+while num > 0:
+  print(num)
+  num -= 1
+```
+
+WHEN TO USE FOR or WHILE? : Use while loop for conditional execution of code
+
+
+PYTHON FUNCTIONS:
+
+# define the function
+def my_function():
+  pass
+
+# call the function
+my_function()
+
+
+PARAMETERS AND ARGUMENTS:
+
+Parameter = name of the variable used in the function
+Argument = inputs sent to the function/ actual value of the variable used in the function
+
+POSITIONAL AND KEYWORD ARGUMENTS:
+
+Positional arguments: the order of arguments decide mapping to parameters
+Keyword arguments: the name of the parameter is provided with the argument
+
+MODULO OPERATOR: 
+4 % 25 = 4
+34 % 25 = 9
+
+ALWAYS REMEMBER: modulo of a number by a bigger number is the number itself, modulo of a number by itself is zero and modulo of a number by a smaller number gives a remainder ranging from 0 to the smaller number
+
+List data structure has count function to count the number of occurrence of an element of the list.
+
+
+DICTIONARIES:
+
+key value pairs {Key: Value}
+
+fetch data from the dictionary: dictionary["key"]
+
+add data to the dictionary: dictionary["key"] = value
+
+loop through the dictionary: k, v for k, v in dict.items()
+
+MAXIMUM OF VALUES IN A DICTIONARY: max(bidding, key=bidding.get)
+
+DOCSTRINGS: documentation in python functions
+- first line after function name declaration
+- use """ DOCSTRING """
+
+def function_name():
+    """ DOCSTRING """
+
+Store function as a value to a variable: 
+my_variable = add
+my_variable() # equivalent to add()
+
+NAMESPACE AND GLOBAL SCOPE:
+
+Local Scope: variables inside a scope is only valid within the scope
+Global Scope: variables defined globally are accessible to any scope
+Block Scope: NO BLOCK SCOPE IN PYTHON (scopes of if while for are not considered)
+
+Modifying Global Scope:
+
+a = 1
+def random_function():
+	global a
+	a = 2
+	print(a)
+print(a)
+# Both print statements print 2
+
+DEBUGGGING:
+
+Step1: Describe the problem
+Step2: Reproduce the bug
+Step3: Play computer (execute step by step)
+Step4: Fix Error using try except
+Step5: Print
+Step6: Debugger
+```
+try:
+  # something
+except ValueError:
+  # something
+```
