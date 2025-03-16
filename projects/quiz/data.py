@@ -1,0 +1,11 @@
+question_data = [
+        {"type":"boolean","difficulty":"medium","category":"Entertainment: Video Games","question":"In &quot;Resident Evil&quot;, only Chris has access to the grenade launcher.","correct_answer":"False","incorrect_answers":["True"]},
+        {"type":"boolean","difficulty":"easy","category":"Entertainment: Comics","question":"Deadpool&#039;s identity is Slade Wilson.","correct_answer":"False","incorrect_answers":["True"]},
+        {"type":"boolean","difficulty":"easy","category":"Entertainment: Video Games","question":"In the game Dead by Daylight, the killer Michael Myers is refered to as &quot;The Shape&quot;.","correct_answer":"True","incorrect_answers":["False"]},
+        {"type":"boolean","difficulty":"hard","category":"Entertainment: Video Games","question":"The retail disc of Tony Hawk&#039;s Pro Skater 5 only comes with the tutorial.","correct_answer":"True","incorrect_answers":["False"]},
+        {"type":"boolean","difficulty":"easy","category":"Entertainment: Video Games","question":"In the &quot;S.T.A.L.K.E.R.&quot; series, the Freedom faction wishes to destroy the supernatural area known as  &quot;the Zone&quot;.","correct_answer":"False","incorrect_answers":["True"]},
+        {"type":"boolean","difficulty":"medium","category":"Vehicles","question":"The snowmobile was invented by Canadian Joseph-Armand Bombardier in 1937.","correct_answer":"True","incorrect_answers":["False"]},
+        {"type":"boolean","difficulty":"medium","category":"Entertainment: Film","question":"Stanley Kubrick&#039;s &quot;Dr. Strangelove&quot; (1964) originally ended with a large pie fight in the war room.","correct_answer":"True","incorrect_answers":["False"]},{"type":"boolean","difficulty":"easy","category":"Entertainment: Music","question":"Muse is a British (English) rock band","correct_answer":"True","incorrect_answers":["False"]},
+        {"type":"boolean","difficulty":"medium","category":"Science: Mathematics","question":"111,111,111 x 111,111,111 = 12,345,678,987,654,321","correct_answer":"True","incorrect_answers":["False"]},
+        {"type":"boolean","difficulty":"medium","category":"Science: Computers","question":"The first dual-core CPU was the Intel Pentium D.","correct_answer":"False","incorrect_answers":["True"]}
+    ]
