@@ -16,6 +16,9 @@
 # OOP
 # quiz
 # hirst painting
+# snake - part 1
+# snake - part 2
+# pong
 
 
 
