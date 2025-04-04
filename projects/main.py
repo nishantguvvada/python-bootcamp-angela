@@ -26,6 +26,7 @@
 # mile to km converter
 # pomodoro timer
 # password manager
+# erros and exceptions
 
 
 

@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 from random import choice, randint, shuffle
 import pyperclip
+import json
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
@@ -21,6 +22,24 @@ def generate_password():
     password_input.insert(0, password)
     pyperclip.copy(password)
 
+# ---------------------------- SEARCH WEBSITE ------------------------------- #
+
+def search_website():
+    website = website_input.get()
+
+    try:
+        with open("data.json") as file:
+            data = json.load(file)
+
+        
+        website_data = [object[website] for object in data if website in object][0]
+        email = website_data["email"]
+        password = website_data["password"]
+        messagebox.showinfo(title=website, message=f"Email: {email}, Password: {password}")
+
+    except:
+        messagebox.showinfo(title="Error", message="No Data File Found")
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 def save_file():
@@ -28,19 +47,35 @@ def save_file():
     website = website_input.get()
     email = username_input.get()
     password = password_input.get()
+    new_data = {
+        website: {
+            "email": email,
+            "password": password
+        }
+    }
 
-    if len(website) == 0 or len(password):
+    if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Oops", message=f"Please make sure you haven't left any fields empty")
 
-    is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \n Email: {email}"
-                           f"\nPassword: {password} \nIs it ok to save?")
+    else:
+        try:
+            with open("data.json", "r") as file:
+                data = json.load(file)
 
-    if is_ok:
-        with open("data.txt", "a") as file:
-            file.write(f"{website} | {email} | {password}\n")
+        except:
+            with open("data.json", "w") as file:
+                json.dump([new_data], file, indent=4)
+        
+        else:
+            with open("data.json", "w") as file:
+                data.append(new_data)
+                json.dump(data, file, indent=4)
+
+        finally:
             website_input.delete(0, END)
             username_input.delete(0, END)
             password_input.delete(0, END)
+
 
 
 
@@ -60,9 +95,12 @@ canvas.grid(column=1, row=0)
 website = Label(text="Website:", font=("Arial"))
 website.grid(column=0, row=1)
 
-website_input = Entry(width=35)
-website_input.grid(column=1, row=1, columnspan=2)
+website_input = Entry(width=21)
+website_input.grid(column=1, row=1, columnspan=1)
 website_input.focus()
+
+website_button = Button(width=14, text="Search", command=search_website)
+website_button.grid(column=2, row=1)
 
 username = Label(text="Email/Username:", font=("Arial"))
 username.grid(column=0, row=2)
